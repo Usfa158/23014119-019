@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Hub</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #2563eb;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 5px;
+            display: inline-block;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3b82f6;
+            border-radius: 5px;
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            padding: 50px;
+            text-align: center;
+            color: #333;
+        }
+
+        .btn {
+            background: linear-gradient(90deg, #22c55e, #16a34a);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, #16a34a, #15803d);
+        }
+
+        /* Input Fields */
+        input {
+            width: 80%;
+            max-width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        💙 Blood Donation Hub 💙
+    </header>
+
+    <nav>
+        <a onclick="showSection('home')">🏠 Home</a>
+        <a onclick="showSection('about')">📖 About</a>
+        <a onclick="showSection('donors')">🩸 Find Donors</a>
+        <a onclick="showSection('register')">📝 Register</a>
+        <a onclick="showSection('contact')">📞 Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h2>🏥 Welcome to Blood Donation Hub</h2>
+        <p>Your small act of kindness can save lives. Join us in this noble cause.</p>
+        <a onclick="showSection('register')" class="btn">📝 Register Now</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>📖 About Us</h2>
+        <p>We connect blood donors with those in urgent need. Become a lifesaver today!</p>
+    </section>
+
+    <!-- Find Donors Section -->
+    <section id="donors" class="section">
+        <h2>🩸 Find Blood Donors</h2>
+        <p>Search for nearby donors and help those in need.</p>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register" class="section">
+        <h2>📝 Register as a Donor</h2>
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Blood Group">
+        <input type="text" placeholder="City">
+        <button class="btn">Submit</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>📞 Contact Us</h2>
+        <p>Email: support@bloodhub.com</p>
+        <p>Phone: +923230772853</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Blood Donation Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        showSection('home'); // Open Home Section by default
+    </script>
+
+</body>
+</html>
