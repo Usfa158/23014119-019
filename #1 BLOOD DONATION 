@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Hub</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        /* Header */
+        header {
+            background-color: #008080;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #20b2aa;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            display: inline-block;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #2e8b57;
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Motivational Quotes */
+        .quote-box {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px auto;
+            padding: 15px;
+            border-left: 5px solid;
+            width: 70%;
+        }
+
+        /* Buttons */
+        .btn {
+            background: #20b2aa;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #2e8b57;
+        }
+
+        /* Table Styling */
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #008080;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #008080;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #008080;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        🩸 Blood Donation Hub 🩸
+    </header>
+
+    <nav>
+        <a onclick="showSection('home')">🏠 Home</a>
+        <a onclick="showSection('about')">📖 About</a>
+        <a onclick="showSection('donors')">🩸 Find Donors</a>
+        <a onclick="showSection('register')">📝 Register</a>
+        <a onclick="showSection('contact')">📞 Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h2>🏥 Welcome to Blood Donation Hub</h2>
+        
+        <div class="quote-box" id="motivationQuote">
+            <strong>“Your blood is a lifeline for someone in need. Donate and be a hero!”</strong>
+        </div>
+
+        <p>Be a hero, save lives. Your donation can make a difference.</p>
+        <a onclick="showSection('register')" class="btn">📝 Register Now</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>📖 About Us</h2>
+        <p>We believe in saving lives by connecting <strong>blood donors</strong> with those in need.</p>
+        <a onclick="showSection('register')" class="btn">📝 Join as a Donor</a>
+    </section>
+
+    <!-- Find Donors Section -->
+    <section id="donors" class="section">
+        <h2>🩸 Find Blood Donors</h2>
+        <table>
+            <tr>
+                <th>Blood Group</th>
+                <th>Location</th>
+                <th>Contact</th>
+            </tr>
+            <tr>
+                <td>A+</td>
+                <td>Lahore</td>
+                <td>0300-1234567</td>
+            </tr>
+            <tr>
+                <td>B-</td>
+                <td>Islamabad</td>
+                <td>0301-7654321</td>
+            </tr>
+            <tr>
+                <td>O+</td>
+                <td>Karachi</td>
+                <td>0321-9876543</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register" class="section">
+        <h2>📝 Register as a Donor</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required> <br><br>
+            <input type="text" placeholder="Blood Group" required> <br><br>
+            <input type="text" placeholder="Location" required> <br><br>
+            <input type="tel" placeholder="Contact Number" required> <br><br>
+            <button class="btn">Submit</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>📞 Contact Us</h2>
+        <div class="quote-box" style="color: #e74c3c; border-left-color: #e74c3c;">
+            <strong>“Someone’s life is waiting for your kindness. Donate blood, be a hero!”</strong>
+        </div>
+        <p style="font-size: 18px; font-weight: bold; color: #2c3e50;">
+            Blood donation saves lives. Your single donation can help up to 3 people!
+        </p>
+        <h3 style="color: #d35400;">📲 Urgent Blood Requests:</h3>
+        <p style="font-size: 20px; font-weight: bold; color: #e74c3c;">☎ 23014119-019</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Blood Donation Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        showSection('home'); 
+
+        // Motivational Quotes
+        const quotes = [
+            "“Your blood is a lifeline for someone in need. Donate and be a hero!”",
+            "“A single drop of blood can save a life. Be a donor, be a lifesaver!”",
+            "“Real heroes don't wear capes; they donate blood.”",
+            "“Saving one life is like saving the entire humanity.”",
+            "“Your little act of kindness can give someone another chance to live.”",
+            "“Donate blood today and make tomorrow brighter for someone in need.”",
+            "“A small effort from you can bring a huge smile to someone's face.”",
+            "“Give blood, give life. Your generosity can change a life forever.”",
+            "“Your donation today can be someone’s miracle tomorrow.”",
+            "“Be a reason for someone's heartbeat. Donate blood today.”"
+        ];
+
+        function changeQuote() {
+            let randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("motivationQuote").innerHTML = `<strong>${quotes[randomIndex]}</strong>`;
+        }
+
+        changeQuote();
+        setInterval(changeQuote, 2000);
+    </script>
+
+</body>
+</html>
