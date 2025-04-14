@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blood Donation Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    window.onload = function () {
+      showSection('home');
+    };
+  </script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-white to-blue-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white text-center py-6 shadow-md">
+    <h1 class="text-4xl font-bold tracking-wide">🩸 Blood Donation Hub</h1>
+    <p class="text-sm mt-2">Saving Lives, One Drop at a Time</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md sticky top-0 z-50 text-blue-800 flex justify-center gap-6 py-3 font-semibold">
+    <a href="javascript:void(0)" onclick="showSection('home')" class="hover:text-blue-600">Home</a>
+    <a href="javascript:void(0)" onclick="showSection('about')" class="hover:text-blue-600">About</a>
+    <a href="javascript:void(0)" onclick="showSection('donors')" class="hover:text-blue-600">Donors</a>
+    <a href="javascript:void(0)" onclick="showSection('register')" class="hover:text-blue-600">Register</a>
+    <a href="javascript:void(0)" onclick="showSection('contact')" class="hover:text-blue-600">Contact</a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="section flex flex-col items-center justify-center text-center px-6 py-16 bg-gradient-to-r from-blue-700 to-blue-500 text-white">
+    <h2 class="text-5xl font-bold mb-4">Be a Lifesaver</h2>
+    <p class="text-lg mb-6 max-w-xl">Join our community of donors and help those in urgent need. Your blood is someone’s hope.</p>
+    <button onclick="showSection('register')" class="bg-white text-blue-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-gray-100">📝 Register Now</button>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section py-12 px-6 bg-white text-center" style="display:none;">
+    <h2 class="text-3xl font-bold mb-4">About Us</h2>
+    <p class="max-w-2xl mx-auto text-lg text-gray-700">
+      Blood Donation Hub connects compassionate donors with those fighting for their lives. We're a platform built on trust, speed, and humanity — because every second matters.
+    </p>
+  </section>
+
+  <!-- Donors -->
+  <section id="donors" class="section bg-gray-100 py-12 px-6" style="display:none;">
+    <h2 class="text-3xl font-bold text-center mb-6">Available Donors</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full max-w-4xl mx-auto border border-gray-300 rounded shadow-md">
+        <thead class="bg-blue-700 text-white">
+          <tr>
+            <th class="py-3 px-4">Name</th>
+            <th class="py-3 px-4">Blood Group</th>
+            <th class="py-3 px-4">City</th>
+            <th class="py-3 px-4">Contact</th>
+          </tr>
+        </thead>
+        <tbody class="text-center bg-white">
+          <tr class="border-t">
+            <td class="py-2">Ali Butt</td>
+            <td class="py-2">A+</td>
+            <td class="py-2">Lahore</td>
+            <td class="py-2">0300-1234567</td>
+          </tr>
+          <tr class="border-t bg-gray-50">
+            <td class="py-2">Usman</td>
+            <td class="py-2">B+</td>
+            <td class="py-2">Faisalabad</td>
+            <td class="py-2">0301-6543210</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Register -->
+  <section id="register" class="section bg-white py-12 px-6" style="display:none;">
+    <h2 class="text-3xl font-bold text-center mb-6">Become a Donor</h2>
+    <form class="max-w-lg mx-auto bg-blue-50 p-8 rounded-lg shadow space-y-4">
+      <input type="text" placeholder="Full Name" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      <input type="text" placeholder="Blood Group" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      <input type="text" placeholder="City" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      <input type="tel" placeholder="Contact Number" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded">Submit</button>
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-gray-100 py-12 px-6 text-center" style="display:none;">
+    <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+    <p class="text-lg mb-2">Phone: <span class="text-blue-800 font-semibold">23014119-019</span></p>
+    <p class="text-lg">Email: <span class="text-blue-700">blooddonation@hub.com</span></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white text-center py-4">
+    &copy; 2025 Blood Donation Hub. All rights reserved.
+  </footer>
+
+</body>
+</html>
